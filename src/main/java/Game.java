@@ -25,6 +25,11 @@ public class Game {
         screen.refresh();
     }
     public void run(){
-        draw();
+        Game game = new Game();
+        try {
+            game.draw();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
